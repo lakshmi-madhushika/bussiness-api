@@ -1,0 +1,39 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "bussiness API",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev:build": "npm run clean && webpack --mode development --config webpack.config.js",
+    "dev": "cross-env Node_ENV=development nodemon dist/index.bundle.js",
+    "watch": "webpack --watch --mode development --config webpack.config.js",
+    "startAll": "npm-run-all -p dev watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cross-env": "^7.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "mongoose": "^5.8.5",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.6.0",
+    "eslint-config-equimper": "^2.2.2",
+    "morgan": "^1.9.1",
+    "rimraf": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
